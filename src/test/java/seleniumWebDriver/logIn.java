@@ -12,8 +12,8 @@ public class logIn {
     public void startWebDriver(){
         WebDriver driver = new FirefoxDriver();
         driver.navigate().to("https://www.virgingames.com");
-        Assert.assertTrue("Title should be different", driver.getTitle().startsWith("Deposit £10 & Get £30 | Virgin Games"));
-        //driver.findElement(By.id("show-login-button")).click();
+        Assert.assertTrue(driver.getTitle().startsWith("Deposit £10 & Get £30 | Virgin Games"));
+        Assert.assertTrue(driver.findElement(By.id("loginSubmit")).isDisplayed());
         driver.findElement(By.id("usernameField")).sendKeys("jimmyace");
         driver.findElement(By.id("passwordField")).sendKeys("basson55");
         driver.findElement(By.id("loginSubmit")).click();

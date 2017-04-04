@@ -26,5 +26,8 @@
         <module name="Selenium_WebDriver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Selenium_WebDriver" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
