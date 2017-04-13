@@ -4,13 +4,14 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class logIn {
 
     @Test
     public void startWebDriver(){
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
         driver.navigate().to("https://www.virgingames.com");
         Assert.assertTrue(driver.getTitle().startsWith("Deposit £10 & Get £30 | Virgin Games"));
         Assert.assertTrue(driver.findElement(By.id("loginSubmit")).isDisplayed());
